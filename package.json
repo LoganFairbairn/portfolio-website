@@ -1,0 +1,17 @@
+{
+  "name": "portfolio-website",
+  "version": "1.0.0",
+  "description": "Logan Fairbairn's Portfolio Website",
+  "main": "index.js",
+  "homepage": "https://loganfairbairn.github.io/portfolio-website",
+  "scripts": {
+    "sass": "node-sass -w SCSS/ -o Release/CSS/ --recursive",
+    "deploy": "gh-pages -d Release"
+  },
+  "author": "Logan Fairbairn",
+  "license": "MIT",
+  "dependencies": {
+    "gh-pages": "^2.2.0",
+    "node-sass": "^4.13.1"
+  }
+}

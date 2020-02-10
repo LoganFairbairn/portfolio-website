@@ -1,0 +1,142 @@
+@import "config";
+
+//Globals
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+}
+
+body {
+  font-family: Hack, monospace;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+}
+
+a {
+  color: $primary-text-color;
+  text-decoration: none;
+}
+
+.main-container {
+  width: 90%;
+  margin: auto;
+}
+
+.console-text {
+  color: $primary-color;
+}
+
+//Navigation
+#main-nav {
+  min-height: 3vh;
+  padding: 5px;
+
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  align-items: center;
+
+  #main-nav-links {
+    ul {
+      li {
+        display: inline;
+        padding-right: 10px;
+      }
+    }
+  }
+}
+
+//Header
+#main-header {
+  color: $primary-text-color;
+
+  h1 {
+    color: $primary-text-color;
+    font-size: 4rem;
+  }
+
+  h5 {
+    color: $primary-text-color;
+    font-size: 16px;
+  }
+
+  #introduction {
+    margin-top: 10px;
+    margin-bottom: 30px;
+    width: 50%;
+  }
+
+  a {
+    color: $primary-color;
+    background-color: black;
+    border: 1px solid $primary-color;
+    padding: 15px;
+
+    &:hover {
+      color: $secondary-color;
+      border-color: $secondary-color;
+    }
+  }
+}
+
+//Footer
+#main-footer {
+  margin-top: auto;
+  p {
+    color: $secondary-text-color;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+}
+
+.projects {
+  h1 {
+    color: $primary-text-color;
+    font-size: 3rem;
+  }
+}
+
+.projects-grid {
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+.project-container {
+  background-color: grey;
+  flex-basis: 340px;
+  border-bottom: 3px solid white;
+
+  .project-thumbnail {
+    img {
+      width: 300px;
+    }
+  }
+
+  ul {
+    li {
+      display: inline;
+    }
+  }
+}
+
+//Tablets
+@media (min-width: 768px) {
+  .projects-grid {
+    display: flex;
+    justify-content: center;
+    flex: wrap;
+  }
+}
+
+//Phones
+@media (max-width: 500px) {
+  #main-header {
+    #introduction {
+      width: 100%;
+    }
+  }
+}
