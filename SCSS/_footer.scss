@@ -1,0 +1,14 @@
+#main-footer {
+  width: 100%;
+  background-color: darken($main-background-color, 5%);
+  min-height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  p {
+    color: darken($main-text-color, 20%);
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+}

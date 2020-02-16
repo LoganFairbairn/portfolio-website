@@ -15,14 +15,16 @@
       crossorigin="anonymous"
     ></script>
 
-    <!-- Access to Hack font. -->
+    <!-- Access to fonts. -->
     <link
       rel="stylesheet"
       href="//cdn.jsdelivr.net/npm/hack-font@3/build/web/hack.css"
     />
 
-    <!-- JavaScript files. -->
-    <script src="../JavaScript/MatrixCodeRain.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- CSS Styles -->
     <link rel="stylesheet" href="../CSS/style.css" />
@@ -30,55 +32,158 @@
     <title>Logan Fairbairn | Software Developer</title>
   </head>
   <body>
-    <!-- Navigation -->
-    <nav id="main-nav">
+    <!-- Navbar -->
+    <nav class="navbar">
       <div class="media-links">
-        <a href="https://www.linkedin.com/in/logan-fairbairn">
+        <a href="https://www.linkedin.com/in/logan-fairbairn" target="_blank">
           <i class="fab fa-linkedin fa-2x"></i>
         </a>
-        <a href="https://github.com/LoganFairbairn">
+        <a href="https://github.com/LoganFairbairn" target="_blank">
           <i class="fab fa-github fa-2x"></i>
         </a>
       </div>
 
-      <div id="main-nav-links">
+      <div class="site-nav">
         <ul>
           <li>
-            <a href="#"><span class="console-text">01.</span> About</a>
+            <a href="#intro"><span class="colored-text">01.</span> Intro</a>
           </li>
           <li>
-            <a href="#"><span class="console-text">02.</span> Projects</a>
+            <a href="#about"><span class="colored-text">02.</span> About</a>
           </li>
           <li>
-            <a href="#"><span class="console-text">03.</span> Contact</a>
+            <a href="#projects"
+              ><span class="colored-text">03.</span> Projects</a
+            >
+          </li>
+          <li>
+            <a href="#contact"><span class="colored-text">04.</span> Contact</a>
           </li>
         </ul>
       </div>
     </nav>
 
-    <!-- Header -->
-    <div class="main-container">
-      <header id="main-header">
-        <h1>Logan Fairbairn</h1>
-        <div id="introduction">
+    <main>
+      <!-- Intro -->
+      <section id="intro">
+        <div class="container">
+          <h2>01. Intro</h2>
+          <h1>Logan Fairbairn</h1>
           <p>
-            Welcome to my website...
-            <br />
-            <br />
-            I'm a virtual developer based in Ottawa, ON that develops high
-            quality, iteratively supported desktop applications, websites and 3D
-            models.
-            <br />
-            <br />
-            Contact me at logan-fairbairn@outlook.com
+            Software Developer
           </p>
+          <div class="site-nav">
+            <a class="link-button" href="#projects">See My Work</a>
+            <a class="link-button" href="#contact">Get In Touch</a>
+          </div>
         </div>
-        <a href="#">See My Projects</a>
-      </header>
-    </div>
+      </section>
 
-    <!-- Main Section -->
-    <main></main>
+      <!-- About -->
+      <section id="about">
+        <div class="container">
+          <h2>02. About</h2>
+          <h1>About Me</h1>
+          <div class="profile-image">
+            <img src="../Images/RyverProfilePicture.png" />
+          </div>
+          <div class="info">
+            <p>
+              Hiya! I'm Logan, a software developer that lives in Nepean, ON.
+              <br />
+              <br />
+              I found a passion for making games in high school, which prompted
+              me to enroll in Algonquin College's Game Development program.
+              <br />
+              After I graduated I pursued interests in 3D modelling and
+              programming game engines.
+              <br />
+              After a few years of experimenting, I found developing websites to
+              be my favorite.
+              <br />
+              <br />
+              Here's a list of my favorite tools and technologies:
+            </p>
+          </div>
+        </div>
+
+        <h4>Programming Languages</h4>
+        <ul>
+          <li>HTML & (S)CSS</li>
+          <li>JavaScript (ES6+)</li>
+          <li>C#</li>
+          <li>C++</li>
+        </ul>
+
+        <h4>Computer Graphics</h4>
+        <ul>
+          <li>GIMP</li>
+          <li>Blender</li>
+        </ul>
+      </section>
+
+      <!-- Projects -->
+      <section id="projects">
+        <h2>03. Projects</h2>
+        <h1>Here's some stuff I made.</h1>
+
+        <div class="featured-project">
+          <h1>Project Title</h1>
+          <ul>
+            <li>WPF</li>
+            <li>XAML</li>
+            <li>Visual Studio</li>
+          </ul>
+        </div>
+
+        <table>
+          <tr>
+            <th>Year</th>
+            <th>Project Name</th>
+            <th>Built With</th>
+            <th>Link</th>
+          </tr>
+
+          <tr>
+            <td>2016</td>
+            <td>Dead Pulse</td>
+            <td>Game Maker</td>
+            <td><a href="#"></a></td>
+          </tr>
+
+          <tr>
+            <td>2016</td>
+            <td>Dead Pulse</td>
+            <td></td>
+            <td>
+              <a href="#">
+                <i class="fab fa-github fa-2x"></i>
+              </a>
+            </td>
+          </tr>
+        </table>
+      </section>
+
+      <section id="contact">
+        <h2>04. Contact</h2>
+        <h1>Get In Touch</h1>
+        <p>
+          Need a website?
+          <br />
+          Just want to say hi?
+          <br />
+          Contact me at logan-fairbairn@outlook.com
+          <br />
+        </p>
+        <a
+          class="link-button"
+          href="mailto:logan-fairbairn@outlook.com"
+          target="blank"
+          rel="nofollow noopener noreferrer"
+          >Say Hello</a
+        >
+      </section>
+    </main>
 
     <!-- Main Footer -->
     <footer id="main-footer">
@@ -89,5 +194,9 @@
         </p>
       </a>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0.0/dist/smooth-scroll.polyfills.min.js"></script>
+    <script src="../JavaScript/smooth-scroll.js"></script>
+    <script src="../JavaScript/linked-particles.js"></script>
   </body>
 </html>
