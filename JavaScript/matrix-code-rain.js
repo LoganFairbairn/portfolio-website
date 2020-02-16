@@ -1,14 +1,15 @@
 var canvas;
-const maxSymbolSize = 26;
+const maxSymbolSize = 22;
 const minSymbolSize = 10;
-const maxSymbolChains = 20;
+const maxSymbolLength = 26;
+const maxSymbolChains = 24;
 const symbolChains = [];
 let chainPositions = [];
 let filledPositions = [];
 
 function setup() {
   //Setup a new canvas.
-  canvas = createCanvas(window.innerWidth, window.innerHeight);
+  canvas = createCanvas(window.innerWidth, window.innerHeight * 4);
   canvas.position(0, 0);
   canvas.style("z-index", "-1");
   textSize(maxSymbolSize);
@@ -20,7 +21,7 @@ function setup() {
 
 //Draws the effect.
 function draw() {
-  background(0, 0, 0, 200);
+  background(20, 18, 24, 200);
 
   for (var i = 0; i < symbolChains.length; i++) {
     symbolChains[i].render();
@@ -30,7 +31,7 @@ function draw() {
 
 //Resizes the canvas if the window is resized.
 function windowResized() {
-  resizeCanvas(windowWidth, windowHeight);
+  resizeCanvas(windowWidth, windowHeight * 4);
   calculateChainPositions();
 }
 
@@ -49,15 +50,15 @@ class SymbolParticle {
 
   //Renders the particle to the screen.
   render(x, y) {
-    let colorVariation = round(1 - this.size / maxSymbolSize) * 100 * 2;
+    let colorVariation = round(1 - this.size / maxSymbolSize) * 100 * 1;
 
-    let r = 0;
-    let g = 255;
+    let r = 221;
+    let g = 141;
     let b = 70;
     if (this.first == true) {
-      r = 180;
-      g = 255;
-      b = 180;
+      r = 43;
+      g = 219;
+      b = 253;
     }
 
     r -= colorVariation;
@@ -94,7 +95,7 @@ class SymbolChain {
     this.speed = random(2, 4);
     this.size = round(random(minSymbolSize, maxSymbolSize));
     this.symbols = [];
-    this.totalSymbols = round(random(14, 26));
+    this.totalSymbols = round(random(14, maxSymbolLength));
     this.chainHeight = 0;
     this.generateSymbols(this.x, this.y);
   }
@@ -155,7 +156,10 @@ function createSymbolChains() {
     x = chainPositions[floor(random(0, chainPositions.length))];
 
     //Create the chain at that position.
-    var symbolChain = new SymbolChain(x, random(-1200, -100));
+    var symbolChain = new SymbolChain(
+      x,
+      random(-1 * window.innerHeight * 5, -400)
+    );
     symbolChains.push(symbolChain);
   }
 }
