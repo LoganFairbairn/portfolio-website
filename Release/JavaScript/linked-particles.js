@@ -1,14 +1,14 @@
 var canvas;
-const numberOfSections = 4;
+let canvasHeight = 0;
+let canvasWidth = 0;
 const particleSize = 3;
 const particles = [];
 const linkDistance = 300;
 
 function setup() {
-  canvas = createCanvas(
-    window.innerWidth,
-    window.innerHeight * numberOfSections
-  );
+  calculateCanvasSize();
+
+  canvas = createCanvas(canvasWidth, canvasHeight);
   canvas.position(0, 0);
   canvas.style("z-index", "-1");
 
@@ -30,7 +30,22 @@ function draw() {
 }
 
 function windowResized() {
-  resizeCanvas(windowWidth, windowHeight * 4);
+  calculateCanvasSize();
+  resizeCanvas(canvasWidth, canvasHeight);
+}
+
+function calculateCanvasSize() {
+  canvasWidth = window.innerWidth;
+
+  canvasHeight = 0;
+
+  var sections = document.getElementsByClassName("main-section");
+  console.log("Number of sections: " + sections.length.toString());
+  for (let i = 0; i < sections.length; i++) {
+    canvasHeight += sections[i].scrollHeight;
+  }
+
+  console.log(canvasHeight);
 }
 
 class Particle {

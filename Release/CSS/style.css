@@ -83,7 +83,7 @@ ul {
 
 section {
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -143,17 +143,29 @@ section {
 
 #portfolio {
   text-align: center; }
-
-.projects {
-  display: flex; }
-  .projects .project {
-    flex: 33.33%;
-    padding: 20px;
-    min-height: 300px;
-    background-color: #1d1d1e;
-    border-radius: 6px; }
-    .projects .project h3 {
-      font-size: 2rem; }
+  #portfolio .ft-project {
+    display: flex; }
+    #portfolio .ft-project .ft-project-info {
+      flex: 50%; }
+    #portfolio .ft-project .ft-project-image img {
+      width: 500px; }
+  #portfolio .projects {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1em; }
+    #portfolio .projects .project {
+      text-align: left;
+      padding: 20px;
+      min-height: 280px;
+      background-color: #1d1d1e;
+      border-radius: 6px; }
+      #portfolio .projects .project .project-info {
+        flex: 90%; }
+      #portfolio .projects .project .project-links {
+        flex: 10%; }
+      #portfolio .projects .project .project-title {
+        font-size: 2rem;
+        color: #dd8d46; }
 
 #contact {
   text-align: center; }
