@@ -1,0 +1,48 @@
+#portfolio {
+  text-align: center;
+
+  .ft-project {
+    display: flex;
+
+    .ft-project-info {
+      flex: 50%;
+    }
+
+    .ft-project-image {
+      img {
+        width: 500px;
+        border-bottom: 4px solid $color-1;
+        border-radius: 6px;
+      }
+    }
+  }
+
+  .projects {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1em;
+
+    .project {
+      text-align: left;
+      padding: 20px;
+      min-height: 280px;
+      background-color: $alt-background-color;
+      border-radius: 6px;
+
+      display: flex;
+
+      .project-info {
+        flex: 90%;
+      }
+
+      .project-links {
+        flex: 10%;
+      }
+
+      .project-title {
+        font-size: 2rem;
+        color: $color-2;
+      }
+    }
+  }
+}

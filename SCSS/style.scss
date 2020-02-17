@@ -1,8 +1,16 @@
 @import "variables";
+
+//Globals
 @import "globals";
+@import "buttons";
 @import "tag";
-@import "navbar";
-@import "footer";
+
+//Layout
+@import "./Layout/navbar";
+@import "./Layout/intro";
+@import "./Layout/about";
+@import "./Layout/portfolio";
+@import "./Layout/footer";
 
 //Sections
 section {
@@ -26,52 +34,6 @@ section {
   }
 }
 
-//Intro
-#intro {
-  text-align: center;
-
-  h1 {
-    font-size: 8rem;
-  }
-
-  p {
-    margin-bottom: 5vh;
-    color: darken($main-text-color, 30%);
-  }
-}
-
-//About
-#about {
-  text-align: center;
-
-  h1 {
-    font-size: 6rem;
-  }
-
-  .about-info {
-    display: flex;
-    align-items: center;
-    text-align: left;
-
-    .profile-image {
-      flex: 30%;
-
-      display: flex;
-      justify-content: center;
-
-      img {
-        width: 250px;
-        border: solid 4px $color-1;
-        border-radius: 50%;
-      }
-    }
-
-    .about-text {
-      flex: 70%;
-    }
-  }
-}
-
 .skills {
   display: flex;
   h4 {
@@ -91,52 +53,6 @@ section {
         background-color: $tag-color;
         border: 1px solid $tag-color;
         border-radius: 36px;
-      }
-    }
-  }
-}
-
-//Portfolio
-#portfolio {
-  text-align: center;
-
-  .ft-project {
-    display: flex;
-
-    .ft-project-info {
-      flex: 50%;
-    }
-
-    .ft-project-image {
-      img {
-        width: 500px;
-      }
-    }
-  }
-
-  .projects {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 1em;
-
-    .project {
-      text-align: left;
-      padding: 20px;
-      min-height: 280px;
-      background-color: $alt-background-color;
-      border-radius: 6px;
-
-      .project-info {
-        flex: 90%;
-      }
-
-      .project-links {
-        flex: 10%;
-      }
-
-      .project-title {
-        font-size: 2rem;
-        color: $color-2;
       }
     }
   }
