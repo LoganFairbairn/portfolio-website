@@ -34,6 +34,11 @@ function windowResized() {
   resizeCanvas(canvasWidth, canvasHeight);
 }
 
+function deviceTurned() {
+  calculateCanvasSize();
+  resizeCanvas(canvasWidth, canvasHeight);
+}
+
 function calculateCanvasSize() {
   canvasWidth = window.innerWidth;
 
