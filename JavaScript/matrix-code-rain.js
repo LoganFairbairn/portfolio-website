@@ -1,4 +1,6 @@
 var canvas;
+let canvasHeight = 0;
+let canvasWidth = 0;
 const maxSymbolSize = 22;
 const minSymbolSize = 10;
 const maxSymbolLength = 26;
@@ -8,8 +10,8 @@ let chainPositions = [];
 let filledPositions = [];
 
 function setup() {
-  //Setup a new canvas.
-  canvas = createCanvas(window.innerWidth, window.innerHeight * 4);
+  calculateCanvasSize();
+  canvas = createCanvas(canvasWidth, canvasHeight);
   canvas.position(0, 0);
   canvas.style("z-index", "-1");
   textSize(maxSymbolSize);
@@ -21,7 +23,7 @@ function setup() {
 
 //Draws the effect.
 function draw() {
-  background(20, 18, 24, 200);
+  background(20);
 
   for (var i = 0; i < symbolChains.length; i++) {
     symbolChains[i].render();
@@ -31,8 +33,23 @@ function draw() {
 
 //Resizes the canvas if the window is resized.
 function windowResized() {
-  resizeCanvas(windowWidth, windowHeight * 4);
+  calculateCanvasSize();
+  resizeCanvas(canvasWidth, canvasHeight);
   calculateChainPositions();
+}
+
+function calculateCanvasSize() {
+  canvasWidth = window.innerWidth;
+
+  canvasHeight = 0;
+
+  var sections = document.getElementsByClassName("main-section");
+  console.log("Number of sections: " + sections.length.toString());
+  for (let i = 0; i < sections.length; i++) {
+    canvasHeight += sections[i].scrollHeight;
+  }
+
+  console.log(canvasHeight);
 }
 
 //Symbol Particle
