@@ -28,3 +28,13 @@
     }
   }
 }
+
+@media (max-width: 1000px) {
+  .about-info {
+    flex-direction: column;
+  }
+
+  .profile-image {
+    flex-direction: column;
+  }
+}

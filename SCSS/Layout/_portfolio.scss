@@ -24,25 +24,58 @@
 
     .project {
       text-align: left;
-      padding: 20px;
       min-height: 280px;
+      padding: 20px;
       background-color: $alt-background-color;
-      border-radius: 6px;
-
+      border-radius: 4px;
       display: flex;
+      flex-direction: column;
 
-      .project-info {
-        flex: 90%;
-      }
-
-      .project-links {
-        flex: 10%;
+      h6 {
+        margin-bottom: 10px;
       }
 
       .project-title {
         font-size: 2rem;
         color: $color-2;
       }
+
+      .project-info {
+        flex: 80%;
+      }
+
+      .project-links {
+        background-color: $main-background-color;
+        border: solid 1px $main-background-color;
+        flex: 10%;
+        border-radius: 4px;
+        padding: 10px;
+        margin-bottom: 5px;
+      }
+
+      .project-tags {
+        background-color: $main-background-color;
+        border: solid 1px $main-background-color;
+        flex: 10%;
+        border-radius: 4px;
+        padding: 10px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1400px) {
+  #portfolio {
+    .projects {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+
+@media (max-width: 720px) {
+  #portfolio {
+    .projects {
+      grid-template-columns: repeat(1, 1fr);
     }
   }
 }

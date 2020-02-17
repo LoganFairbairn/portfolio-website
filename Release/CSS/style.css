@@ -8,7 +8,7 @@ html {
 
 body {
   font-family: "Hack", monospace;
-  background-color: #141218;
+  background-color: #141414;
   min-height: 100vh;
   display: flex;
   flex-direction: column; }
@@ -26,6 +26,10 @@ ul {
 
 .colored-text {
   color: #dd8d46; }
+
+@media (max-width: 1400px) {
+  .container {
+    width: 90%; } }
 
 .link-button {
   display: inline-block;
@@ -47,6 +51,7 @@ ul {
   border-radius: 36px; }
 
 .navbar {
+  background-color: rgba(0, 0, 0, 0.2);
   min-height: 60px;
   width: 100%;
   padding: 5px;
@@ -97,6 +102,12 @@ ul {
     #about .about-info .about-text {
       flex: 70%; }
 
+@media (max-width: 1000px) {
+  .about-info {
+    flex-direction: column; }
+  .profile-image {
+    flex-direction: column; } }
+
 #portfolio {
   text-align: center; }
   #portfolio .ft-project {
@@ -113,22 +124,44 @@ ul {
     grid-gap: 1em; }
     #portfolio .projects .project {
       text-align: left;
-      padding: 20px;
       min-height: 280px;
+      padding: 20px;
       background-color: #1d1d1e;
-      border-radius: 6px;
-      display: flex; }
-      #portfolio .projects .project .project-info {
-        flex: 90%; }
-      #portfolio .projects .project .project-links {
-        flex: 10%; }
+      border-radius: 4px;
+      display: flex;
+      flex-direction: column; }
+      #portfolio .projects .project h6 {
+        margin-bottom: 10px; }
       #portfolio .projects .project .project-title {
         font-size: 2rem;
         color: #dd8d46; }
+      #portfolio .projects .project .project-info {
+        flex: 80%; }
+      #portfolio .projects .project .project-links {
+        background-color: #141414;
+        border: solid 1px #141414;
+        flex: 10%;
+        border-radius: 4px;
+        padding: 10px;
+        margin-bottom: 5px; }
+      #portfolio .projects .project .project-tags {
+        background-color: #141414;
+        border: solid 1px #141414;
+        flex: 10%;
+        border-radius: 4px;
+        padding: 10px; }
+
+@media (max-width: 1400px) {
+  #portfolio .projects {
+    grid-template-columns: repeat(2, 1fr); } }
+
+@media (max-width: 720px) {
+  #portfolio .projects {
+    grid-template-columns: repeat(1, 1fr); } }
 
 #main-footer {
   width: 100%;
-  background-color: #080709;
+  background-color: #070707;
   min-height: 10vh;
   display: flex;
   flex-direction: column;
@@ -148,7 +181,9 @@ section {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 10px; }
   section h1 {
     font-size: 8rem;
     font-family: "Permanent Marker";

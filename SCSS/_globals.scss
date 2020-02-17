@@ -35,3 +35,9 @@ ul {
 .colored-text {
   color: $color-2;
 }
+
+@media (max-width: 1400px) {
+  .container {
+    width: 90%;
+  }
+}
