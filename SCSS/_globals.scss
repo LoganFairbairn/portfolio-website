@@ -1,0 +1,50 @@
+* {
+  margin: 0;
+  padding: 0;
+  color: $main-text-color;
+}
+
+html {
+  font-size: 14px;
+}
+
+body {
+  font-family: "Hack", monospace;
+  background-color: $main-background-color;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  text-decoration: none;
+
+  a:hover {
+    color: $color-1;
+  }
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  width: 60%;
+}
+
+.colored-text {
+  color: $color-2;
+}
+
+.link-button {
+  margin: 2vh;
+  color: $color-2;
+  border: solid 2px $color-2;
+  border-radius: 2px;
+  padding: 15px;
+
+  &:hover {
+    color: lighten($color-2, 30%);
+    border-color: lighten($color-2, 30%);
+  }
+}

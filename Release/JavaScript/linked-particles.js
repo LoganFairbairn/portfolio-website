@@ -26,7 +26,6 @@ function draw() {
     particle.update();
     particle.draw();
     particle.checkParticles(particles.slice(idx));
-    particle.avoidCursor();
   });
 }
 
@@ -76,14 +75,5 @@ class Particle {
         line(this.pos.x, this.pos.y, particle.pos.x, particle.pos.y);
       }
     });
-  }
-
-  avoidCursor() {
-    const distance = dist(this.pos.x, this.pos.y, mouseX, mouseY);
-
-    if (distance < 100) {
-      this.vel.x *= -1;
-      this.vel.y *= -1;
-    }
   }
 }

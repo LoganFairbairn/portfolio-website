@@ -3,8 +3,14 @@
   background-color: darken($main-background-color, 5%);
   min-height: 10vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  a {
+    color: darken($main-text-color, 20%);
+  }
+
   p {
     color: darken($main-text-color, 20%);
     margin-top: 10px;
