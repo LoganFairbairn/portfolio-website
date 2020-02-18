@@ -5,14 +5,14 @@
 //Globals
 @import "defaults";
 @import "buttons";
-@import "./Components/tag";
+@import "./components/tag";
 
 //Layout
-@import "./Layout/navbar";
-@import "./Layout/intro";
-@import "./Layout/about";
-@import "./Layout/portfolio";
-@import "./Layout/footer";
+@import "./sections/navbar";
+@import "./sections/intro";
+@import "./sections/about";
+@import "./sections/projects";
+@import "./sections/footer";
 
 .colored-text {
   color: $color-2;

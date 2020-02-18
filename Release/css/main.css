@@ -121,21 +121,21 @@ ul {
   .profile-image {
     flex-direction: column; } }
 
-#portfolio {
+#projects {
   text-align: center; }
-  #portfolio .ft-project {
+  #projects .ft-project {
     display: flex; }
-    #portfolio .ft-project .ft-project-info {
+    #projects .ft-project .ft-project-info {
       flex: 50%; }
-    #portfolio .ft-project .ft-project-image img {
+    #projects .ft-project .ft-project-image img {
       width: 500px;
       border-bottom: 4px solid #2bdbfd;
       border-radius: 6px; }
-  #portfolio .projects {
+  #projects .projects {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 1em; }
-    #portfolio .projects .project {
+    #projects .projects .project {
       text-align: left;
       min-height: 280px;
       padding: 20px;
@@ -143,19 +143,19 @@ ul {
       border-radius: 4px;
       display: flex;
       flex-direction: column; }
-      #portfolio .projects .project h6 {
+      #projects .projects .project h6 {
         margin-bottom: 10px; }
-      #portfolio .projects .project .project-title {
+      #projects .projects .project .project-title {
         font-size: 2rem;
         color: #dd8d46; }
-      #portfolio .projects .project .project-info {
+      #projects .projects .project .project-info {
         flex: 80%; }
-      #portfolio .projects .project .project-links {
+      #projects .projects .project .project-links {
         flex: 10%;
         border-radius: 4px;
         padding: 10px;
         margin-bottom: 5px; }
-      #portfolio .projects .project .project-tags {
+      #projects .projects .project .project-tags {
         flex: 10%;
         border-radius: 4px;
         padding: 10px; }
