@@ -29,6 +29,30 @@
   }
 }
 
+.skills {
+  display: flex;
+  h4 {
+    margin-bottom: 10px;
+  }
+
+  .skills-list {
+    border-radius: 5px;
+    width: 50%;
+    ul {
+      margin-top: 5px;
+      margin-bottom: 5px;
+      li {
+        display: inline-block;
+        margin-top: 5px;
+        padding: 5px 20px 5px 20px;
+        background-color: $tag-color;
+        border: 1px solid $tag-color;
+        border-radius: 36px;
+      }
+    }
+  }
+}
+
 @media (max-width: 1000px) {
   .about-info {
     flex-direction: column;

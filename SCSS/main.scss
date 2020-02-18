@@ -1,9 +1,11 @@
+//Main describes
 @import "variables";
+@import "transitions";
 
 //Globals
-@import "globals";
+@import "defaults";
 @import "buttons";
-@import "tag";
+@import "./Components/tag";
 
 //Layout
 @import "./Layout/navbar";
@@ -11,6 +13,10 @@
 @import "./Layout/about";
 @import "./Layout/portfolio";
 @import "./Layout/footer";
+
+.colored-text {
+  color: $color-2;
+}
 
 //Sections
 section {
@@ -36,31 +42,28 @@ section {
   }
 }
 
-.skills {
-  display: flex;
-  h4 {
-    margin-bottom: 10px;
-  }
+.container {
+  width: 60%;
+}
 
-  .skills-list {
-    border-radius: 5px;
-    width: 50%;
-    ul {
-      margin-top: 5px;
-      margin-bottom: 5px;
-      li {
-        display: inline-block;
-        margin-top: 5px;
-        padding: 5px 20px 5px 20px;
-        background-color: $tag-color;
-        border: 1px solid $tag-color;
-        border-radius: 36px;
-      }
+@media (max-width: 1400px) {
+  .container {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  section {
+    h1 {
+      font-size: 6rem;
     }
   }
 }
 
-//Contact
-#contact {
-  text-align: center;
+@media screen and (max-width: 500px) {
+  section {
+    h1 {
+      font-size: 4rem;
+    }
+  }
 }

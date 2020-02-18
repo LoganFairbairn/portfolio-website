@@ -28,6 +28,7 @@
       padding: 20px;
       background-color: $alt-background-color;
       border-radius: 4px;
+
       display: flex;
       flex-direction: column;
 
@@ -45,8 +46,6 @@
       }
 
       .project-links {
-        background-color: $main-background-color;
-        border: solid 1px $main-background-color;
         flex: 10%;
         border-radius: 4px;
         padding: 10px;
@@ -54,8 +53,6 @@
       }
 
       .project-tags {
-        background-color: $main-background-color;
-        border: solid 1px $main-background-color;
         flex: 10%;
         border-radius: 4px;
         padding: 10px;

@@ -27,13 +27,15 @@
     />
 
     <!-- CSS Styles -->
-    <link rel="stylesheet" href="../CSS/style.css" />
+    <link rel="stylesheet" href="./css/main.css" />
 
     <title>Logan Fairbairn | Software Developer</title>
   </head>
+  
   <body>
     <!-- Navbar -->
-    <nav class="navbar">
+    <nav id="main-navbar">
+
       <div class="media-link-icons">
         <a href="https://www.linkedin.com/in/logan-fairbairn" target="_blank">
           <i class="fab fa-linkedin fa-2x"></i>
@@ -43,7 +45,14 @@
         </a>
       </div>
 
-      <div class="site-nav">
+      <h4>Menu</h4>
+      <div class="menu-button">
+        <div class="button-line"></div>
+        <div class="button-line"></div>
+        <div class="button-line"></div>
+      </div>
+
+      <div id="main-menu">
         <ul>
           <li>
             <a href="#intro"><span class="colored-text">01.</span> Intro</a>
@@ -61,6 +70,7 @@
           </li>
         </ul>
       </div>
+
     </nav>
 
     <main>
@@ -155,34 +165,20 @@
         -->
           <div class="projects">
 
+            
+
             <div class="project">
-              <div class="project-info">
-                <h3 class="project-title">Outrun</h3>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel
-                  ducimus impedit nobis id cum architecto.
-                </p>
-              </div>
-
-              <div class="project-links">
-                <h6>Project Links</h6>
-                <a href="https://github.com/LoganFairbairn" target="_blank">
-                  <i class="fab fa-github fa-2x"></i>
-                </a>
-              </div>
-
+              <img src="./images/project-thumbnails/Outrun-Thumbnail.jpg" alt="Project Thumbnail">
               
-              <div class="project-tags">
-                <h6>Built with</h6>
-                <ul>
-                  <li class="tag">C#</li>
-                  <li class="tag">WPF</li>
-                  <li class="tag">.NET</li>
-                </ul>
+              <div class="project-links">
+                <a href="#" target="_blank">
+                  <i class="fas fa-external-link-alt fa-2x"></i>
+                </a>
+                <a href="https://github.com/LoganFairbairn" target="_blank">
+                  <i class="fab fa-github fa-2x"></i>
+                </a>
               </div>
-            </div>
 
-            <div class="project">
               <div class="project-info">
                 <h3 class="project-title">Outrun</h3>
                 <p>
@@ -190,95 +186,6 @@
                   ducimus impedit nobis id cum architecto.
                 </p>
               </div>
-
-              <div class="project-links">
-                <h6>Project Links</h6>
-                <a href="https://github.com/LoganFairbairn" target="_blank">
-                  <i class="fab fa-github fa-2x"></i>
-                </a>
-              </div>
-
-              
-              <div class="project-tags">
-                <h6>Built with</h6>
-                <ul>
-                  <li class="tag">C#</li>
-                  <li class="tag">WPF</li>
-                  <li class="tag">.NET</li>
-                </ul>
-              </div>
-            </div>
-
-            <div class="project">
-              <div class="project-info">
-                <h3 class="project-title">Outrun</h3>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel
-                  ducimus impedit nobis id cum architecto.
-                </p>
-              </div>
-
-              <div class="project-links">
-                <h6>Project Links</h6>
-                <a href="https://github.com/LoganFairbairn" target="_blank">
-                  <i class="fab fa-github fa-2x"></i>
-                </a>
-              </div>
-
-              
-              <div class="project-tags">
-                <h6>Built with</h6>
-                <ul>
-                  <li class="tag">C#</li>
-                  <li class="tag">WPF</li>
-                  <li class="tag">.NET</li>
-                </ul>
-              </div>
-            </div>
-
-            <div class="project">
-              <div class="project-info">
-                <h3 class="project-title">Outrun</h3>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel
-                  ducimus impedit nobis id cum architecto.
-                </p>
-              </div>
-
-              <div class="project-links">
-                <h6>Project Links</h6>
-                <a href="https://github.com/LoganFairbairn" target="_blank">
-                  <i class="fab fa-github fa-2x"></i>
-                </a>
-              </div>
-
-              
-              <div class="project-tags">
-                <h6>Built with</h6>
-                <ul>
-                  <li class="tag">C#</li>
-                  <li class="tag">WPF</li>
-                  <li class="tag">.NET</li>
-                </ul>
-              </div>
-            </div>
-
-            <div class="project">
-              <div class="project-info">
-                <h3 class="project-title">Outrun</h3>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel
-                  ducimus impedit nobis id cum architecto.
-                </p>
-              </div>
-
-              <div class="project-links">
-                <h6>Project Links</h6>
-                <a href="https://github.com/LoganFairbairn" target="_blank">
-                  <i class="fab fa-github fa-2x"></i>
-                </a>
-              </div>
-
               
               <div class="project-tags">
                 <h6>Built with</h6>
@@ -314,7 +221,7 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0.0/dist/smooth-scroll.polyfills.min.js"></script>
-    <script src="../JavaScript/smooth-scroll.js"></script>
-    <script src="../JavaScript/linked-particles.js"></script>
+    <script src="./scripts/smooth-scroll.js"></script>
+    <script src="./scripts/linked-particles.js"></script>
   </body>
 </html>
