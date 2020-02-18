@@ -7,7 +7,6 @@ const linkDistance = 300;
 
 function setup() {
   calculateCanvasSize();
-
   canvas = createCanvas(canvasWidth, canvasHeight);
   canvas.position(0, 0);
   canvas.style("z-index", "-1");

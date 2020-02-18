@@ -21,16 +21,6 @@ a {
 ul {
   list-style: none; }
 
-.container {
-  width: 60%; }
-
-.colored-text {
-  color: #dd8d46; }
-
-@media (max-width: 1400px) {
-  .container {
-    width: 90%; } }
-
 .link-button {
   display: inline-block;
   margin: 2vh;
@@ -50,7 +40,7 @@ ul {
   border: 1px solid #0b0a0e;
   border-radius: 36px; }
 
-.navbar {
+#main-navbar {
   background-color: rgba(0, 0, 0, 0.2);
   min-height: 60px;
   width: 100%;
@@ -61,13 +51,18 @@ ul {
   display: flex;
   justify-content: space-between;
   align-items: center; }
-  .navbar .media-link-icons {
+  #main-navbar .menu-button .button-line {
+    width: 28px;
+    height: 3px;
+    margin: 0 0 5px 0;
+    background: #fff; }
+  #main-navbar .media-link-icons {
     margin-left: 2vw; }
-    .navbar .media-link-icons a {
+    #main-navbar .media-link-icons a {
       margin-left: 5px; }
-  .navbar ul {
+  #main-navbar .site-nav-links ul {
     margin-right: 2vw; }
-    .navbar ul li {
+    #main-navbar .site-nav-links ul li {
       display: inline;
       padding-right: 10px; }
 
@@ -102,27 +97,45 @@ ul {
     #about .about-info .about-text {
       flex: 70%; }
 
+.skills {
+  display: flex; }
+  .skills h4 {
+    margin-bottom: 10px; }
+  .skills .skills-list {
+    border-radius: 5px;
+    width: 50%; }
+    .skills .skills-list ul {
+      margin-top: 5px;
+      margin-bottom: 5px; }
+      .skills .skills-list ul li {
+        display: inline-block;
+        margin-top: 5px;
+        padding: 5px 20px 5px 20px;
+        background-color: #0b0a0e;
+        border: 1px solid #0b0a0e;
+        border-radius: 36px; }
+
 @media (max-width: 1000px) {
   .about-info {
     flex-direction: column; }
   .profile-image {
     flex-direction: column; } }
 
-#portfolio {
+#projects {
   text-align: center; }
-  #portfolio .ft-project {
+  #projects .ft-project {
     display: flex; }
-    #portfolio .ft-project .ft-project-info {
+    #projects .ft-project .ft-project-info {
       flex: 50%; }
-    #portfolio .ft-project .ft-project-image img {
+    #projects .ft-project .ft-project-image img {
       width: 500px;
       border-bottom: 4px solid #2bdbfd;
       border-radius: 6px; }
-  #portfolio .projects {
+  #projects .projects {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 1em; }
-    #portfolio .projects .project {
+    #projects .projects .project {
       text-align: left;
       min-height: 280px;
       padding: 20px;
@@ -130,23 +143,19 @@ ul {
       border-radius: 4px;
       display: flex;
       flex-direction: column; }
-      #portfolio .projects .project h6 {
+      #projects .projects .project h6 {
         margin-bottom: 10px; }
-      #portfolio .projects .project .project-title {
+      #projects .projects .project .project-title {
         font-size: 2rem;
         color: #dd8d46; }
-      #portfolio .projects .project .project-info {
+      #projects .projects .project .project-info {
         flex: 80%; }
-      #portfolio .projects .project .project-links {
-        background-color: #141414;
-        border: solid 1px #141414;
+      #projects .projects .project .project-links {
         flex: 10%;
         border-radius: 4px;
         padding: 10px;
         margin-bottom: 5px; }
-      #portfolio .projects .project .project-tags {
-        background-color: #141414;
-        border: solid 1px #141414;
+      #projects .projects .project .project-tags {
         flex: 10%;
         border-radius: 4px;
         padding: 10px; }
@@ -175,6 +184,9 @@ ul {
     margin-bottom: 10px;
     text-align: center; }
 
+.colored-text {
+  color: #dd8d46; }
+
 section {
   width: 100%;
   min-height: 100vh;
@@ -192,23 +204,17 @@ section {
     font-size: 1rem;
     color: #dd8d46; }
 
-.skills {
-  display: flex; }
-  .skills h4 {
-    margin-bottom: 10px; }
-  .skills .skills-list {
-    border-radius: 5px;
-    width: 50%; }
-    .skills .skills-list ul {
-      margin-top: 5px;
-      margin-bottom: 5px; }
-      .skills .skills-list ul li {
-        display: inline-block;
-        margin-top: 5px;
-        padding: 5px 20px 5px 20px;
-        background-color: #0b0a0e;
-        border: 1px solid #0b0a0e;
-        border-radius: 36px; }
+.container {
+  width: 60%; }
 
-#contact {
-  text-align: center; }
+@media (max-width: 1400px) {
+  .container {
+    width: 90%; } }
+
+@media screen and (max-width: 768px) {
+  section h1 {
+    font-size: 6rem; } }
+
+@media screen and (max-width: 500px) {
+  section h1 {
+    font-size: 4rem; } }
