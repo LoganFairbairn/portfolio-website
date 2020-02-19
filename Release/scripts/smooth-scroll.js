@@ -1,2 +1,2 @@
 //SmoothScroll Script
-var scroll = new SmoothScroll('.site-nav a[href*="#"]', { speed: 800 });
+var scroll = new SmoothScroll('.site-nav-links a[href*="#"]', { speed: 800 });

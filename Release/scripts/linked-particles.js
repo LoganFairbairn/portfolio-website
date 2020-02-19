@@ -11,7 +11,8 @@ function setup() {
   canvas.position(0, 0);
   canvas.style("z-index", "-1");
 
-  let particlesLength = Math.min(Math.floor(window.innerWidth / 2), 100);
+  let particlesLength = Math.min(Math.floor(window.innerWidth / 8), 120);
+  console.log(particlesLength.toString());
 
   for (let i = 0; i < particlesLength; i++) {
     particles.push(new Particle());
@@ -48,8 +49,6 @@ function calculateCanvasSize() {
   for (let i = 0; i < sections.length; i++) {
     canvasHeight += sections[i].scrollHeight;
   }
-
-  console.log(canvasHeight);
 }
 
 class Particle {

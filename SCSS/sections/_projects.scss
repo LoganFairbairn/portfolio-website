@@ -24,8 +24,6 @@
 
     .project {
       text-align: left;
-      min-height: 280px;
-      padding: 20px;
       background-color: $alt-background-color;
       border-radius: 4px;
 
@@ -33,36 +31,46 @@
       flex-direction: column;
 
       h6 {
-        margin-bottom: 10px;
+        margin-top: 10px;
+        margin-bottom: 2px;
       }
 
-      .project-title {
-        font-size: 2rem;
-        color: $color-2;
-      }
-
-      .project-info {
-        flex: 80%;
+      .project-image {
+        img {
+          width: 100%;
+        }
       }
 
       .project-links {
-        flex: 10%;
+        background-color: rgba($color: black, $alpha: 0.5);
         border-radius: 4px;
         padding: 10px;
-        margin-bottom: 5px;
+        margin: 5px;
+        position: absolute;
       }
 
-      .project-tags {
-        flex: 10%;
-        border-radius: 4px;
-        padding: 10px;
+      .project-info {
+        padding: 20px;
+        .project-title {
+          font-size: 2rem;
+          color: $color-2;
+        }
+
+        .project-description {
+          flex: 80%;
+        }
+
+        .project-tags {
+          flex: 20%;
+          border-radius: 4px;
+        }
       }
     }
   }
 }
 
 @media (max-width: 1400px) {
-  #portfolio {
+  #projects {
     .projects {
       grid-template-columns: repeat(2, 1fr);
     }
@@ -70,7 +78,7 @@
 }
 
 @media (max-width: 720px) {
-  #portfolio {
+  #projects {
     .projects {
       grid-template-columns: repeat(1, 1fr);
     }
