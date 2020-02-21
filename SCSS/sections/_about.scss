@@ -5,6 +5,15 @@
     font-size: 6rem;
   }
 
+  h3 {
+    color: $color-2;
+    margin-bottom: 1vh;
+  }
+
+  h4 {
+    color: darken($main-text-color, 30%);
+  }
+
   .about-info {
     display: flex;
     align-items: center;
@@ -26,6 +35,9 @@
 
     .about-text {
       flex: 70%;
+      p {
+        margin-bottom: 2vh;
+      }
     }
   }
 }
@@ -33,7 +45,7 @@
 .skills {
   display: flex;
   h4 {
-    margin-bottom: 10px;
+    margin-bottom: 1vh;
   }
 
   .skills-list {
