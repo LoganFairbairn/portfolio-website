@@ -1,7 +1,8 @@
 * {
   margin: 0;
   padding: 0;
-  color: gainsboro; }
+  color: gainsboro;
+  box-sizing: border-box; }
 
 html {
   font-size: 14px; }
@@ -11,7 +12,8 @@ body {
   background-color: #141414;
   min-height: 100vh;
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  overflow-x: hidden; }
 
 a {
   text-decoration: none; }
@@ -82,6 +84,11 @@ ul {
   text-align: center; }
   #about h1 {
     font-size: 6rem; }
+  #about h3 {
+    color: #dd8d46;
+    margin-bottom: 1vh; }
+  #about h4 {
+    color: #909090; }
   #about .about-info {
     display: flex;
     align-items: center;
@@ -93,14 +100,17 @@ ul {
       #about .about-info .profile-image img {
         width: 250px;
         border: solid 4px #2bdbfd;
-        border-radius: 50%; }
+        border-radius: 50%;
+        margin-bottom: 4vh; }
     #about .about-info .about-text {
       flex: 70%; }
+      #about .about-info .about-text p {
+        margin-bottom: 2vh; }
 
 .skills {
   display: flex; }
   .skills h4 {
-    margin-bottom: 10px; }
+    margin-bottom: 1vh; }
   .skills .skills-list {
     border-radius: 5px;
     width: 50%; }
@@ -123,50 +133,56 @@ ul {
 
 #projects {
   text-align: center; }
-  #projects .ft-project {
-    display: flex; }
-    #projects .ft-project .ft-project-info {
-      flex: 50%; }
-    #projects .ft-project .ft-project-image img {
-      width: 500px;
-      border-bottom: 4px solid #2bdbfd;
-      border-radius: 6px; }
   #projects .projects {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 1em; }
     #projects .projects .project {
       text-align: left;
-      min-height: 280px;
-      padding: 20px;
       background-color: #1d1d1e;
-      border-radius: 4px;
+      border: solid 1px #333333;
+      border-radius: 2px;
       display: flex;
-      flex-direction: column; }
-      #projects .projects .project h6 {
-        margin-bottom: 10px; }
+      flex-direction: column;
+      justify-items: center; }
+      #projects .projects .project .project-image img {
+        width: 100%;
+        border-top: solid 1px #333333;
+        border-bottom: solid 1px #333333; }
+      #projects .projects .project .project-header {
+        background-color: rgba(0, 0, 0, 0.2);
+        padding: 10px; }
+        #projects .projects .project .project-header a {
+          position: absolute; }
       #projects .projects .project .project-title {
         font-size: 2rem;
-        color: #dd8d46; }
-      #projects .projects .project .project-info {
-        flex: 80%; }
-      #projects .projects .project .project-links {
-        flex: 10%;
-        border-radius: 4px;
-        padding: 10px;
-        margin-bottom: 5px; }
+        color: #dd8d46;
+        text-align: center; }
+      #projects .projects .project .project-description {
+        flex: 90%;
+        padding: 14px;
+        margin-top: 10px;
+        margin-bottom: 10px; }
       #projects .projects .project .project-tags {
         flex: 10%;
-        border-radius: 4px;
-        padding: 10px; }
+        background-color: rgba(0, 0, 0, 0.2); }
+        #projects .projects .project .project-tags h5 {
+          width: 100%;
+          margin-top: 14px;
+          margin-left: 14px; }
+        #projects .projects .project .project-tags ul {
+          margin: 0px 14px 14px 14px; }
 
 @media (max-width: 1400px) {
-  #portfolio .projects {
+  #projects .projects {
     grid-template-columns: repeat(2, 1fr); } }
 
 @media (max-width: 720px) {
-  #portfolio .projects {
+  #projects .projects {
     grid-template-columns: repeat(1, 1fr); } }
+
+#contact {
+  text-align: center; }
 
 #main-footer {
   width: 100%;
@@ -194,18 +210,19 @@ section {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 10px;
-  margin-bottom: 10px; }
+  margin-top: 6vh;
+  margin-bottom: 6vh; }
   section h1 {
     font-size: 8rem;
     font-family: "Permanent Marker";
-    color: #2bdbfd; }
+    color: #2bdbfd;
+    margin-bottom: 2vh; }
   section h2 {
     font-size: 1rem;
     color: #dd8d46; }
 
 .container {
-  width: 60%; }
+  width: 80%; }
 
 @media (max-width: 1400px) {
   .container {
