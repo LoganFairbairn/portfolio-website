@@ -1,3 +1,16 @@
+.button {
+  background-color: #1e1e1e;
+  padding: 15px;
+  border-radius: 6px; }
+
+.tag {
+  display: inline-block;
+  margin-top: 5px;
+  padding: 5px 20px 5px 20px;
+  background-color: #0b0a0e;
+  border: 1px solid #0b0a0e;
+  border-radius: 6px; }
+
 * {
   margin: 0;
   padding: 0;
@@ -10,7 +23,6 @@ html {
 body {
   font-family: "Hack", monospace;
   background-color: #141414;
-  background-image: url("/Release/images/DiagonalLines.png");
   background-repeat: repeat;
   min-height: 100vh;
   display: flex;
@@ -24,25 +36,6 @@ a {
 
 ul {
   list-style: none; }
-
-.link-button {
-  display: inline-block;
-  margin: 2vh;
-  color: #dd8d46;
-  border: solid 2px #dd8d46;
-  border-radius: 2px;
-  padding: 15px; }
-  .link-button:hover {
-    color: #f5ddc7;
-    border-color: #f5ddc7; }
-
-.tag {
-  display: inline-block;
-  margin-top: 5px;
-  padding: 5px 20px 5px 20px;
-  background-color: #0b0a0e;
-  border: 1px solid #0b0a0e;
-  border-radius: 36px; }
 
 #main-navbar {
   background-color: rgba(0, 0, 0, 0.2);

@@ -3,7 +3,7 @@ const imagemin = require("gulp-imagemin");
 const uglify = require("gulp-uglify");
 const sass = require("gulp-sass");
 const concat = require("gulp-concat");
-
+var fileinclude = require("gulp-file-include");
 /*
     -- TOP LEVEL FUNCTIONS --
     gulp.task - Define tasks
@@ -53,10 +53,23 @@ gulp.task(
   gulp.parallel(["startmessage", "copyhtml", "imagemin", "sass", "optimizeJS"])
 );
 
+//Includes html files.
+gulp.task("fileinclude", async () => {
+  gulp
+    .src(["src/index.html"])
+    .pipe(
+      fileinclude({
+        prefix: "@@",
+        basepath: "@file"
+      })
+    )
+    .pipe(gulp.dest("dist"));
+});
+
 //Watches
 gulp.task("watch", function() {
   gulp.watch("src/scripts/*.js", gulp.series("optimizeJS"));
   gulp.watch("src/images/*", gulp.series("imagemin"));
-  gulp.watch("src/scss/*.scss", gulp.series("sass"));
-  gulp.watch("src/*html", gulp.series("copyhtml"));
+  gulp.watch("src/scss/**/*.scss", gulp.series("sass"));
+  gulp.watch("src/*html", gulp.series("fileinclude"));
 });

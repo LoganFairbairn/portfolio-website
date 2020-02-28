@@ -5,7 +5,7 @@
   "main": "index.js",
   "homepage": "https://loganfairbairn.github.io/portfolio-website",
   "scripts": {
-    "sass": "node-sass -w scss/ -o dist/css/ --recursive",
+    "sass": "node-sass -w src/scss/ -o dist/css/ --recursive",
     "deploy": "gh-pages -d dist"
   },
   "author": "Logan Fairbairn",
@@ -17,6 +17,7 @@
   },
   "devDependencies": {
     "gulp-concat": "^2.6.1",
+    "gulp-file-include": "^2.1.1",
     "gulp-imagemin": "^7.1.0",
     "gulp-sass": "^4.0.2",
     "gulp-uglify": "^3.0.2"

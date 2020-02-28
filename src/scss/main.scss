@@ -1,19 +1,24 @@
-//Main describes
+//This file is imports ONLY.
+
+//Library - Include first.
+@import "./library/colors";
+@import "./library/buttons";
+@import "./library/tags";
+
+//
 @import "variables";
 @import "transitions";
 
 //Globals
 @import "defaults";
-@import "./components/buttons";
-@import "./components/tags";
 
 //Layout
-@import "./sections/navbar";
-@import "./sections/intro";
-@import "./sections/about";
-@import "./sections/projects";
-@import "./sections/contact";
-@import "./sections/footer";
+@import "./layout/navbar";
+@import "./layout/intro";
+@import "./layout/about";
+@import "./layout/projects";
+@import "./layout/contact";
+@import "./layout/footer";
 
 .colored-text {
   color: $color-2;

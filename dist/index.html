@@ -6,9 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-    <!-- Access to p5.js -->
-    <script src="https://cdn.jsdelivr.net/npm/p5@0.10.2/lib/p5.js"></script>
-
     <!-- Access to website icons. -->
     <script
       src="https://kit.fontawesome.com/b62995a9c3.js"
@@ -35,45 +32,44 @@
   <body>
     <!-- Navbar -->
     <nav id="main-navbar">
-      <div class="media-link-icons">
-        <a href="https://github.com/LoganFairbairn" target="_blank">
-          <i class="fab fa-github fa-2x"></i>
-        </a>
-        <a href="https://www.linkedin.com/in/logan-fairbairn" target="_blank">
-          <i class="fab fa-linkedin fa-2x"></i>
-        </a>
-      </div>
-      <!--
-      <h4>Menu</h4>
-      <div class="menu-button">
-        <div class="button-line"></div>
-        <div class="button-line"></div>
-        <div class="button-line"></div>
-      </div>
-    -->
-      <div class="site-nav-links">
-        <ul>
-          <li>
-            <a href="#intro"><span class="colored-text">01.</span> Intro</a>
-          </li>
-          <li>
-            <a href="#about"><span class="colored-text">02.</span> About</a>
-          </li>
-          <li>
-            <a href="#projects"
-              ><span class="colored-text">03.</span> Projects</a
-            >
-          </li>
-          <li>
-            <a href="#contact"><span class="colored-text">04.</span> Contact</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
+  <div class="media-link-icons">
+    <a href="https://github.com/LoganFairbairn" target="_blank">
+      <i class="fab fa-github fa-2x"></i>
+    </a>
+    <a href="https://www.linkedin.com/in/logan-fairbairn" target="_blank">
+      <i class="fab fa-linkedin fa-2x"></i>
+    </a>
+  </div>
+  <!--
+  <h4>Menu</h4>
+  <div class="menu-button">
+    <div class="button-line"></div>
+    <div class="button-line"></div>
+    <div class="button-line"></div>
+  </div>
+-->
+  <div class="site-nav-links">
+    <ul>
+      <li>
+        <a href="#intro"><span class="colored-text">01.</span> Intro</a>
+      </li>
+      <li>
+        <a href="#about"><span class="colored-text">02.</span> About</a>
+      </li>
+      <li>
+        <a href="#projects"><span class="colored-text">03.</span> Projects</a>
+      </li>
+      <li>
+        <a href="#contact"><span class="colored-text">04.</span> Contact</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
 
     <main>
       <!-- Intro -->
-      <section id="intro" class="main-section">
+      <section id="intro">
         <div class="container">
           <h2>01. Intro</h2>
           <h1>Logan Fairbairn</h1>
@@ -81,18 +77,19 @@
             Software Developer
           </p>
           <div class="site-nav-links">
-            <a class="link-button" href="#projects">See My Work</a>
-            <a class="link-button" href="#contact">Get In Touch</a>
+            <a class="button" href="#projects">See My Work</a>
+            <a class="button" href="#contact">Get In Touch</a>
           </div>
         </div>
       </section>
 
       <!-- About -->
-      <section id="about" class="main-section">
+      <section id="about">
         <div class="container">
           <h2>02. About</h2>
           <h1>About Me</h1>
 
+          <!-- About -->
           <div class="about-info">
             <div class="profile-image">
               <img src="./images/RyverProfilePicture.png" />
@@ -100,48 +97,45 @@
 
             <div class="about-text">
               <p>
-                Hiya! I'm Logan, a software developer that lives in Nepean, ON.
+                Hiya! I'm Logan, a software developer located in Nepean, ON.
                 <br />
                 <br />
-                I found a passion for making games in high school, which
-                prompted me to enroll in Algonquin College's Game Development.
+                I'm a software developer with a focus in front-end web
+                development and design. I create high quality modern websites
+                and applications.
                 <br />
                 <br />
-                After I graduated I pursued interests related to game
-                development, which lead me to web development.
-                <br />
-                <br />
-                I now develop high quality websites and applications.
+                My hobby is making 3D models and art assets.
               </p>
+            </div>
+          </div>
 
-              <h3>My Tools & Technologies</h3>
-
-              <div class="skills">
-                <div class="skills-list">
-                  <h4>Programming Languages</h4>
-                  <ul>
-                    <li>HTML & (S)CSS</li>
-                    <li>JavaScript (ES6+)</li>
-                    <li>C#</li>
-                    <li>C++</li>
-                  </ul>
-                </div>
-                <div class="skills-list">
-                  <h4>Graphics</h4>
-                  <ul>
-                    <li>GIMP</li>
-                    <li>Photoshop</li>
-                    <li>Blender</li>
-                  </ul>
-                </div>
-              </div>
+          <!-- Tools & Technologies Section -->
+          <h3>My Tools & Technologies</h3>
+          <div class="skills">
+            <div class="skills-list">
+              <h4>Programming Languages</h4>
+              <ul>
+                <li>HTML & (S)CSS</li>
+                <li>JavaScript (ES6+)</li>
+                <li>C#</li>
+                <li>C++</li>
+              </ul>
+            </div>
+            <div class="skills-list">
+              <h4>Graphics</h4>
+              <ul>
+                <li>GIMP</li>
+                <li>Photoshop</li>
+                <li>Blender</li>
+              </ul>
             </div>
           </div>
         </div>
       </section>
 
       <!-- Portfolio -->
-      <section id="projects" class="main-section">
+      <section id="projects">
         <div class="container">
           <h2>03. Projects</h2>
           <h1>Projects</h1>
@@ -192,17 +186,14 @@
       </section>
 
       <!-- Contact -->
-      <section id="contact" class="main-section">
+      <section id="contact">
         <h2>04. Contact</h2>
         <h1>Get In Touch</h1>
         <p>
           Need a website? Just want to say hi?
-          <br />
-          <br />
-          Send me an E-Mail friend!
         </p>
         <a
-          class="link-button"
+          class="button"
           href="mailto:logan-fairbairn@outlook.com"
           target="_blank"
           rel="nofollow noopener noreferrer"
@@ -213,14 +204,12 @@
 
     <!-- Main Footer -->
     <footer id="main-footer">
-      <p>Designed and built by Logan Fairbairn</p>
-      <a
-        href="https://github.com/LoganFairbairn/portfolio-website"
-        target="_blank"
-      >
-        Click here to see the code for this website.
-      </a>
-    </footer>
+  <p>Designed and built by Logan Fairbairn</p>
+  <a href="https://github.com/LoganFairbairn/portfolio-website" target="_blank">
+    Click here to see the code for this website.
+  </a>
+</footer>
+
 
     <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0.0/dist/smooth-scroll.polyfills.min.js"></script>
     <script src="./scripts/main.js"></script>
