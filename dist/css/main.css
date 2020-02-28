@@ -10,6 +10,8 @@ html {
 body {
   font-family: "Hack", monospace;
   background-color: #141414;
+  background-image: url("/Release/images/DiagonalLines.png");
+  background-repeat: repeat;
   min-height: 100vh;
   display: flex;
   flex-direction: column;

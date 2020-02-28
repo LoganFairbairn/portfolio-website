@@ -5,13 +5,20 @@
   "main": "index.js",
   "homepage": "https://loganfairbairn.github.io/portfolio-website",
   "scripts": {
-    "sass": "node-sass -w scss/ -o Release/css/ --recursive",
-    "deploy": "gh-pages -d Release"
+    "sass": "node-sass -w scss/ -o dist/css/ --recursive",
+    "deploy": "gh-pages -d dist"
   },
   "author": "Logan Fairbairn",
   "license": "MIT",
   "dependencies": {
     "gh-pages": "^2.2.0",
+    "gulp": "^4.0.2",
     "node-sass": "^4.13.1"
+  },
+  "devDependencies": {
+    "gulp-concat": "^2.6.1",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-uglify": "^3.0.2"
   }
 }
