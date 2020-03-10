@@ -1,0 +1,15 @@
+//This file alters CSS defaults.
+* {
+  margin: 0px;
+  padding: 0px;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+  color: $text-color-1;
+}
+
+body {
+  background-color: $background-color-1;
+  font-family: "hack";
+  overflow-x: hidden;
+}

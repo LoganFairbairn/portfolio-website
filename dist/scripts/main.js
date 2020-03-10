@@ -1,1 +1,1 @@
-var scroll=new SmoothScroll('.site-nav-links a[href*="#"]',{speed:800});
+document.getElementById("navbar-button").addEventListener("click",function(){var a=document.getElementsByClassName("navbar-links");"navbar-links"===a[0].className?a[0].className+=" show":a[0].className="navbar-links"});

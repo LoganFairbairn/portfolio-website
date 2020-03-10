@@ -1,0 +1,64 @@
+#intro {
+  text-align: center;
+
+  animation-name: fade-in;
+  animation-duration: 6s;
+  animation-fill-mode: forwards;
+  transition-timing-function: ease-in;
+
+  h1 {
+    font-size: 8rem;
+    font-family: "Permanent Marker";
+    color: $color-1;
+    margin-bottom: 1vh;
+  }
+
+  h2 {
+    color: darken($text-color-1, 30%);
+    font-size: 1rem;
+    margin-bottom: 3vh;
+  }
+
+  .media-links {
+    ul li {
+      display: inline-block;
+      margin: 0 5px 0 5px;
+    }
+    i {
+      color: darken($text-color-1, 30%);
+
+      &:hover {
+        color: $color-2;
+        transition: 0.5s;
+      }
+    }
+  }
+}
+
+.horizontal-line {
+  background-color: $color-1;
+  height: 2px;
+  margin-bottom: 3vh;
+}
+
+@include phone-only {
+  #intro {
+    h1 {
+      font-size: 5rem;
+    }
+
+    h2 {
+      font-size: 12px;
+    }
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 100;
+  }
+}

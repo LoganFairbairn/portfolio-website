@@ -7,7 +7,7 @@
 
     .project {
       text-align: left;
-      background-color: $alt-background-color;
+      background-color: darken($background-color-1, 20%);
       border: solid 1px darken(white, 80%);
       border-radius: 2px;
 

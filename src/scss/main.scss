@@ -1,76 +1,22 @@
-//This file is imports ONLY.
-
-//Library - Include first.
+//Custom Styling Library (include library first, in specified order)
+//Library Part 1
+@import "./library/containers";
+@import "./library/mobile";
 @import "./library/colors";
-@import "./library/buttons";
-@import "./library/tags";
+@import "./library/shapes";
 
 //
-@import "variables";
-@import "transitions";
-
-//Globals
-@import "defaults";
-
-//Layout
-@import "./layout/navbar";
-@import "./layout/intro";
-@import "./layout/about";
-@import "./layout/projects";
-@import "./layout/contact";
-@import "./layout/footer";
-
-.colored-text {
-  color: $color-2;
-}
+@import "./library/defaults";
+@import "./library/buttons";
+@import "./library/tags";
+@import "./library/navbar";
 
 //Sections
-section {
-  width: 100%;
-  min-height: 100vh;
+@import "./sections/intro";
+@import "./sections/about";
+@import "./sections/projects";
+@import "./sections/contact";
+@import "./sections/footer";
 
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-top: 6vh;
-  margin-bottom: 6vh;
-
-  h1 {
-    font-size: 8rem;
-    font-family: "Permanent Marker";
-    color: $color-1;
-    margin-bottom: 2vh;
-  }
-
-  h2 {
-    font-size: 1rem;
-    color: $color-2;
-  }
-}
-
-.container {
-  width: 80%;
-}
-
-@media (max-width: 1400px) {
-  .container {
-    width: 90%;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  section {
-    h1 {
-      font-size: 6rem;
-    }
-  }
-}
-
-@media screen and (max-width: 500px) {
-  section {
-    h1 {
-      font-size: 4rem;
-    }
-  }
-}
+//Additional Styling
+@import "additional";
