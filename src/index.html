@@ -26,22 +26,66 @@
     <!-- CSS Styles -->
     <link rel="stylesheet" href="./css/main.css" />
 
-    <title>Logan Fairbairn | Software Developer</title>
+    <title>Logan Fairbairn | Intro</title>
   </head>
 
   <body>
-    <!-- Navbar -->
-    @@include('navbar.html')
+    <nav class="navbar">
+      <div id="navbar-logo">
+        <img src="images/RyverProfilePicture.png" alt="navigation bar logo" />
+      </div>
+
+      <ul id="media-links">
+        <li>
+          <a href="https://github.com/LoganFairbairn" target="_blank">
+            <i class="fab fa-github"></i>
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://www.linkedin.com/in/logan-fairbairn/"
+            target="_blank"
+          >
+            <i class="fab fa-linkedin"></i>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.deviantart.com/r-iverca" target="_blank">
+            <i class="fab fa-deviantart"></i>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.artstation.com/r_yver" target="_blank">
+            <i class="fab fa-artstation"></i>
+          </a>
+        </li>
+      </ul>
+
+      <ul class="site-links">
+        <li><a href="/dist/index.html" class="active">Intro</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Portfolio</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+
+      <a id="menu-button"> <i class="fas fa-bars"></i> </a>
+    </nav>
 
     <main>
-      <!-- Intro -->
-      @@include('intro.html')
+      <div class="width-limiter">
+        <section id="intro" class="scroll-section">
+          <h1>Logan Fairbairn</h1>
+          <h2>Front End Web Developer | Digital Artist | Freelancer</h2>
+          <div class="horizontal-line"></div>
+          <a href="#" class="button">Contact Me</a>
+          <a href="#" class="button">Portfolio</a>
+        </section>
+      </div>
     </main>
 
-    <!-- Main Footer -->
     @@include('footer.html')
 
-    <!-- Scripts -->
     <script src="./scripts/main.js"></script>
   </body>
 </html>

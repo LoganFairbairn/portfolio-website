@@ -1,8 +1,8 @@
 //Custom Styling Library (include library first, in specified order)
 //Library Part 1
+@import "./library/variables";
 @import "./library/containers";
 @import "./library/mobile";
-@import "./library/colors";
 @import "./library/shapes";
 
 //
@@ -10,13 +10,10 @@
 @import "./library/buttons";
 @import "./library/tags";
 @import "./library/navbar";
+@import "./sections/footer";
 
 //Sections
 @import "./sections/intro";
-@import "./sections/about";
-@import "./sections/projects";
-@import "./sections/contact";
-@import "./sections/footer";
 
 //Additional Styling
 @import "additional";

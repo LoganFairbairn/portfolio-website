@@ -4,13 +4,6 @@ const uglify = require("gulp-uglify");
 const sass = require("gulp-sass");
 const concat = require("gulp-concat");
 var fileinclude = require("gulp-file-include");
-/*
-    -- TOP LEVEL FUNCTIONS --
-    gulp.task - Define tasks
-    gulp.src - Point to files to use
-    gulp.dest - Point to folder to output
-    gulp.watch - Watch files and folders for changes
-*/
 
 //Logs a starting message.
 gulp.task("startmessage", async () => {
@@ -25,7 +18,7 @@ gulp.task("copyhtml", async () => {
 //Optimizes images files.
 gulp.task("imagemin", () =>
   gulp
-    .src("src/images/*")
+    .src("src/images/**")
     .pipe(imagemin())
     .pipe(gulp.dest("dist/images"))
 );
@@ -47,16 +40,10 @@ gulp.task("optimizeJS", async () => {
     .pipe(gulp.dest("dist/scripts"));
 });
 
-//Runs all tasks (default).
-gulp.task(
-  "default",
-  gulp.parallel(["startmessage", "copyhtml", "imagemin", "sass", "optimizeJS"])
-);
-
 //Includes html files.
 gulp.task("fileinclude", async () => {
   gulp
-    .src(["src/index.html"])
+    .src(["src/*.html"])
     .pipe(
       fileinclude({
         prefix: "@@",
@@ -73,3 +60,16 @@ gulp.task("watch", function() {
   gulp.watch("src/scss/**/*.scss", gulp.series("sass"));
   gulp.watch("src/*html", gulp.series("fileinclude"));
 });
+
+//Runs all tasks (default).
+gulp.task(
+  "default",
+  gulp.parallel([
+    "startmessage",
+    "fileinclude",
+    "copyhtml",
+    "imagemin",
+    "sass",
+    "optimizeJS"
+  ])
+);

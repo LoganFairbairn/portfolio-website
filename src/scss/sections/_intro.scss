@@ -1,6 +1,4 @@
 #intro {
-  text-align: center;
-
   animation-name: fade-in;
   animation-duration: 6s;
   animation-fill-mode: forwards;
@@ -14,18 +12,26 @@
   }
 
   h2 {
-    color: darken($text-color-1, 30%);
+    color: darken($text-color-1, 20%);
     font-size: 1rem;
     margin-bottom: 3vh;
   }
 
+  .horizontal-line {
+    height: 2px;
+    background-color: $color-1;
+    margin-bottom: 3vh;
+  }
+
   .media-links {
+    margin-bottom: 5vh;
+
     ul li {
       display: inline-block;
       margin: 0 5px 0 5px;
     }
     i {
-      color: darken($text-color-1, 30%);
+      color: darken($text-color-1, 20%);
 
       &:hover {
         color: $color-2;
@@ -33,12 +39,6 @@
       }
     }
   }
-}
-
-.horizontal-line {
-  background-color: $color-1;
-  height: 2px;
-  margin-bottom: 3vh;
 }
 
 @include phone-only {

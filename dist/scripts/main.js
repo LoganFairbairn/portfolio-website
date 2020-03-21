@@ -1,1 +1,1 @@
-document.getElementById("navbar-button").addEventListener("click",function(){var a=document.getElementsByClassName("navbar-links");"navbar-links"===a[0].className?a[0].className+=" show":a[0].className="navbar-links"});
+document.getElementById("menu-button").addEventListener("click",function(){var e=document.getElementsByClassName("site-links");"site-links"===e[0].className?e[0].className="site-links show":e[0].className="site-links"});
