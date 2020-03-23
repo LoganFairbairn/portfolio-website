@@ -1,16 +1,17 @@
 //Custom Styling Library (include library first, in specified order)
-//Library Part 1
+//Import Library
 @import "./library/variables";
 @import "./library/containers";
 @import "./library/mobile";
 @import "./library/shapes";
-
-//
 @import "./library/defaults";
 @import "./library/buttons";
 @import "./library/tags";
-@import "./library/navbar";
-@import "./sections/footer";
 
-//Sections
+//Import Sections
+@import "./sections/navbar";
+@import "./sections/footer";
 @import "./sections/intro";
+
+//Import Outrun Application Styling
+@import "outrun";

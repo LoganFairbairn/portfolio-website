@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Icons -->
+    <script
+      src="https://kit.fontawesome.com/b62995a9c3.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Fonts -->
+    <link
+      rel="stylesheet"
+      href="//cdn.jsdelivr.net/npm/hack-font@3/build/web/hack.css"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Hind&display=swap"
+      rel="stylesheet"
+    />
+    <title>Outrun Task Manager</title>
+
+    <link rel="stylesheet" type="text/css" href="/dist/css/main.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div id="navbar-logo">
+        <img src="images/RyverProfilePicture.png" alt="navigation bar logo" />
+      </div>
+
+      <ul id="media-links">
+        <li>
+          <a href="https://github.com/LoganFairbairn" target="_blank">
+            <i class="fab fa-github"></i>
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://www.linkedin.com/in/logan-fairbairn/"
+            target="_blank"
+          >
+            <i class="fab fa-linkedin"></i>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.deviantart.com/r-iverca" target="_blank">
+            <i class="fab fa-deviantart"></i>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.artstation.com/r_yver" target="_blank">
+            <i class="fab fa-artstation"></i>
+          </a>
+        </li>
+      </ul>
+
+      <ul class="site-links">
+        <li><a href="/dist/index.html" class="active">Intro</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Portfolio</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+
+      <a id="menu-button"> <i class="fas fa-bars"></i> </a>
+    </nav>
+
+    <div class="outrun">
+      <h1><span class="color-text">Out</span>run</h1>
+      <div class="input_div">
+        <input
+          class="input"
+          type="text"
+          placeholder="Enter a new task here..."
+        />
+        <button class="addButton"><i class="fas fa-plus"></i></button>
+      </div>
+      <div class="container">
+        <div class="item">
+          <input type="text" class="item_input" value="Task 1" disabled />
+          <button class="editButton">EDIT</button>
+          <button class="removeButton">REMOVE</button>
+        </div>
+      </div>
+    </div>
+
+    <script type="text/javascript" src="/dist/scripts/main.js"></script>
+  </body>
+</html>
